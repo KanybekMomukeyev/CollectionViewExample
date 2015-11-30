@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TGCollectionViewLayout.h
 //  test2
 //
 //  Created by kanybek on 11/30/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
-@end
+@interface TGCollectionViewLayout : UICollectionViewLayout
 
+@end
