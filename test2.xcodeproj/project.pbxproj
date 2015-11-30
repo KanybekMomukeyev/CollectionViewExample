@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B1944024415CD9E40E23900 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3A54DE8205DAE42626F81A /* libPods.a */; };
+		A8BB30581C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BB30571C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.m */; };
 		A8FD88C01C0C112100736D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88BF1C0C112100736D3C /* main.m */; };
 		A8FD88C31C0C112100736D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88C21C0C112100736D3C /* AppDelegate.m */; };
 		A8FD88C61C0C112100736D3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88C51C0C112100736D3C /* ViewController.m */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		402A9F2C813BBC2324F51B0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A3196CE0659A21A6DD0895DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A8BB30561C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TGAppDimensions.h"; sourceTree = "<group>"; };
+		A8BB30571C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TGAppDimensions.m"; sourceTree = "<group>"; };
 		A8FD88BB1C0C112100736D3C /* test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FD88BF1C0C112100736D3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8FD88C11C0C112100736D3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				A8FD88E31C0C28A600736D3C /* TGCollectionViewCell4.m */,
 				A8FD88C71C0C112100736D3C /* Main.storyboard */,
 				A8FD88BE1C0C112100736D3C /* Supporting Files */,
+				A8BB30561C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.h */,
+				A8BB30571C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.m */,
 			);
 			path = test2;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				A8FD88E71C0C303B00736D3C /* TGMessage.m in Sources */,
 				A8FD88EA1C0C3D5200736D3C /* TGCollectionViewLayout.m in Sources */,
 				A8FD88D71C0C130C00736D3C /* TGCollectionViewCell.m in Sources */,
+				A8BB30581C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

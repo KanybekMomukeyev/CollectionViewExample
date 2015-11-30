@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -73,23 +74,47 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="166"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDy-YC-Uy4">
-                                                    <rect key="frame" x="293" y="8" width="299" height="111"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM6-WB-MpK">
-                                                    <rect key="frame" x="8" y="127" width="584" height="31"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM6-WB-MpK">
+                                                    <rect key="frame" x="8" y="137.5" width="584" height="20.5"/>
                                                     <color key="backgroundColor" red="0.95780955336454654" green="0.90839225506421528" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bF6-qO-fS3">
-                                                    <rect key="frame" x="8" y="8" width="277" height="111"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bF6-qO-fS3">
+                                                    <rect key="frame" x="8" y="8" width="287" height="125.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="bF6-qO-fS3" secondAttribute="height" multiplier="287:125" id="iWJ-bt-AJy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDy-YC-Uy4">
+                                                    <rect key="frame" x="305" y="8" width="287" height="125.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="hDy-YC-Uy4" secondAttribute="height" multiplier="287:125" id="7Xm-du-e8b"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.91444046974338367" green="0.95286213309017798" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hM6-WB-MpK" firstAttribute="leading" secondItem="DxM-Al-lxL" secondAttribute="leadingMargin" id="1M3-Ju-yVd"/>
+                                            <constraint firstItem="bF6-qO-fS3" firstAttribute="leading" secondItem="DxM-Al-lxL" secondAttribute="leadingMargin" id="3Pe-Lq-cRQ"/>
+                                            <constraint firstItem="hM6-WB-MpK" firstAttribute="bottom" secondItem="DxM-Al-lxL" secondAttribute="bottomMargin" id="6YH-zW-lWa"/>
+                                            <constraint firstItem="hM6-WB-MpK" firstAttribute="trailing" secondItem="DxM-Al-lxL" secondAttribute="trailingMargin" id="BPh-gP-Wdd"/>
+                                            <constraint firstItem="bF6-qO-fS3" firstAttribute="top" secondItem="DxM-Al-lxL" secondAttribute="topMargin" id="Nk2-BA-1aN"/>
+                                            <constraint firstItem="hDy-YC-Uy4" firstAttribute="top" secondItem="DxM-Al-lxL" secondAttribute="topMargin" id="Uiq-Dv-daz"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="hDy-YC-Uy4" secondAttribute="trailing" id="Vdk-Pp-iwy"/>
+                                            <constraint firstItem="hDy-YC-Uy4" firstAttribute="leading" secondItem="bF6-qO-fS3" secondAttribute="trailing" constant="10" id="fjI-oM-G7o"/>
+                                            <constraint firstItem="hM6-WB-MpK" firstAttribute="top" secondItem="bF6-qO-fS3" secondAttribute="bottom" constant="4" id="qrW-lu-ZHh"/>
+                                            <constraint firstItem="hM6-WB-MpK" firstAttribute="top" secondItem="hDy-YC-Uy4" secondAttribute="bottom" constant="4" id="tVU-ke-O21"/>
+                                            <constraint firstItem="hDy-YC-Uy4" firstAttribute="width" secondItem="bF6-qO-fS3" secondAttribute="width" id="wrb-i6-ieG"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="hM6-WB-MpK" id="8eK-n4-5vv"/>
+                                            <outlet property="imageView1" destination="bF6-qO-fS3" id="VSF-y7-2Of"/>
+                                            <outlet property="imageView2" destination="hDy-YC-Uy4" id="yQ6-JM-jdf"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TGCollectionViewCell3" id="UmX-ca-pUI" customClass="TGCollectionViewCell3">
                                         <rect key="frame" x="0.0" y="352" width="600" height="166"/>
@@ -167,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="339"/>
+            <point key="canvasLocation" x="401" y="321"/>
         </scene>
     </scenes>
 </document>

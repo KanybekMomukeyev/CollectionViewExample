@@ -12,6 +12,7 @@
 #import "SDWebImageDownloader.h"
 #import "TGMessage.h"
 #import "TGCollectionViewLayout.h"
+#import "UIApplication+TGAppDimensions.h"
 
 #import "TGCollectionViewCell.h"
 #import "TGCollectionViewCell2.h"
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, strong) NSMutableArray *images;
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
+@property (nonatomic, assign) CGSize currentCellSize;
 @end
 
 @implementation ViewController
@@ -62,6 +64,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    CGSize tmpSize = self.collectionView.bounds.size;
+    self.currentCellSize = CGSizeMake((tmpSize.width), (tmpSize.height));
     [self generateDifferenImages];
     [self generateRandomCellItems];
 }
@@ -71,11 +75,17 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    //[self.collectionView performBatchUpdates:nil completion:nil];
-    [self.collectionView.collectionViewLayout invalidateLayout];
-}
+//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+//{
+//}
+//
+//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+//{
+//    CGSize tmpSize = self.collectionView.bounds.size;
+//    self.currentCellSize = CGSizeMake((tmpSize.width), (tmpSize.height));
+//    [self.collectionView performBatchUpdates:nil completion:nil];
+//    //[self.collectionView.collectionViewLayout invalidateLayout];
+//}
 
 #pragma mark - Private methods
 + (CGFloat)heightForText:(NSString*)text
@@ -149,13 +159,23 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    TGCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell"
-                                                                           forIndexPath:indexPath];
     TGMessage *message = [self.items objectAtIndex:indexPath.row];
-    NSString *imageUrl = [message.imageItems lastObject];
-    [cell.image sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
-    cell.label.text = message.messageString;
-    return cell;
+    if (message.imageItems.count == 2) {
+        TGCollectionViewCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell2"
+                                                                               forIndexPath:indexPath];
+        [cell.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
+        [cell.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
+        cell.cellLabel.text = message.messageString;
+        return cell;
+    }else {
+        TGCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell"
+                                                                               forIndexPath:indexPath];
+        NSString *imageUrl = [message.imageItems lastObject];
+        [cell.image sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
+        cell.label.text = message.messageString;
+        return cell;
+    }
+    return nil;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout methods
@@ -167,7 +187,7 @@
     CGFloat height = [ViewController heightForText:message.messageString
                                               font:[UIFont systemFontOfSize:17]
                                        withinWidth:(320 - 2*10)];
-    return CGSizeMake(320 - 2 * 10, height);
+    return CGSizeMake(self.currentCellSize.width - 2 * 10, height);
 }
 
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
