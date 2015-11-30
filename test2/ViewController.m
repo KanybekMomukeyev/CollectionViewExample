@@ -161,13 +161,22 @@
 {
     TGMessage *message = [self.items objectAtIndex:indexPath.row];
     if (message.imageItems.count == 2) {
-        TGCollectionViewCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell2"
+        TGCollectionViewCell2 *cell2 = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell2"
                                                                                forIndexPath:indexPath];
-        [cell.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
-        [cell.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
-        cell.cellLabel.text = message.messageString;
-        return cell;
-    }else {
+        [cell2.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
+        [cell2.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
+        cell2.cellLabel.text = message.messageString;
+        return cell2;
+    } else if (message.imageItems.count == 3)
+    {
+        TGCollectionViewCell3 *cell3 = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell3"
+                                                                               forIndexPath:indexPath];
+        [cell3.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
+        [cell3.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
+        [cell3.imageView3 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:2]]];
+        cell3.cellLabel.text = message.messageString;
+        return cell3;
+    } else {
         TGCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell"
                                                                                forIndexPath:indexPath];
         NSString *imageUrl = [message.imageItems lastObject];
@@ -187,7 +196,13 @@
     CGFloat height = [ViewController heightForText:message.messageString
                                               font:[UIFont systemFontOfSize:17]
                                        withinWidth:(320 - 2*10)];
-    return CGSizeMake(self.currentCellSize.width - 2 * 10, height);
+    if (message.imageItems.count > 2)
+    {
+        return CGSizeMake(self.currentCellSize.width - 2 * 10, height + 120);
+    }else
+    {
+        return CGSizeMake(self.currentCellSize.width - 2 * 10, height);
+    }
 }
 
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section

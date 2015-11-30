@@ -117,23 +117,26 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TGCollectionViewCell3" id="UmX-ca-pUI" customClass="TGCollectionViewCell3">
-                                        <rect key="frame" x="0.0" y="352" width="600" height="166"/>
+                                        <rect key="frame" x="0.0" y="352" width="600" height="247"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="166"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="247"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vM-6z-pIA">
-                                                    <rect key="frame" x="8" y="8" width="584" height="49"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3vM-6z-pIA">
+                                                    <rect key="frame" x="8" y="3" width="584" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Aed-uV-keC"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-Ry-nCu">
-                                                    <rect key="frame" x="8" y="62" width="278" height="56"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-Ry-nCu">
+                                                    <rect key="frame" x="8" y="104" width="291.5" height="114"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhj-NO-kL4">
-                                                    <rect key="frame" x="294" y="62" width="296" height="56"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mhj-NO-kL4">
+                                                    <rect key="frame" x="300" y="104" width="291.5" height="114.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-VZ-fo0">
-                                                    <rect key="frame" x="8" y="128" width="582" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-VZ-fo0">
+                                                    <rect key="frame" x="9" y="222" width="582" height="20.5"/>
                                                     <color key="backgroundColor" red="0.98084245753737731" green="1" blue="0.4800874892848298" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,9 +146,33 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.83887962719053799" green="0.62611978184114014" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="fzZ-VZ-fo0" firstAttribute="leading" secondItem="UmX-ca-pUI" secondAttribute="leadingMargin" constant="1" id="0mr-wn-hzY"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="fzZ-VZ-fo0" secondAttribute="trailing" constant="1" id="5Gx-Iy-inZ"/>
+                                            <constraint firstItem="fzZ-VZ-fo0" firstAttribute="top" secondItem="DbK-Ry-nCu" secondAttribute="bottom" constant="4" id="9uk-n9-EpZ"/>
+                                            <constraint firstItem="Mhj-NO-kL4" firstAttribute="trailing" secondItem="UmX-ca-pUI" secondAttribute="trailingMargin" id="BoD-bd-iva"/>
+                                            <constraint firstItem="Mhj-NO-kL4" firstAttribute="leading" secondItem="DbK-Ry-nCu" secondAttribute="trailing" constant="1" id="COg-wt-uWk"/>
+                                            <constraint firstItem="DbK-Ry-nCu" firstAttribute="top" secondItem="3vM-6z-pIA" secondAttribute="bottom" constant="1" id="CPP-03-GFU"/>
+                                            <constraint firstItem="3vM-6z-pIA" firstAttribute="leading" secondItem="UmX-ca-pUI" secondAttribute="leadingMargin" id="NUX-E6-ffT"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="fzZ-VZ-fo0" secondAttribute="bottom" constant="-4" id="Uap-yg-2mz"/>
+                                            <constraint firstItem="fzZ-VZ-fo0" firstAttribute="top" secondItem="Mhj-NO-kL4" secondAttribute="bottom" constant="4" id="g8b-tq-AcP"/>
+                                            <constraint firstItem="Mhj-NO-kL4" firstAttribute="width" secondItem="DbK-Ry-nCu" secondAttribute="width" id="guq-4R-qBO"/>
+                                            <constraint firstItem="3vM-6z-pIA" firstAttribute="trailing" secondItem="UmX-ca-pUI" secondAttribute="trailingMargin" id="jsc-6c-XhP"/>
+                                            <constraint firstItem="Mhj-NO-kL4" firstAttribute="leading" secondItem="DbK-Ry-nCu" secondAttribute="trailing" constant="1" id="kTl-Nn-seC"/>
+                                            <constraint firstItem="DbK-Ry-nCu" firstAttribute="leading" secondItem="UmX-ca-pUI" secondAttribute="leadingMargin" id="kcI-OB-wJY"/>
+                                            <constraint firstItem="Mhj-NO-kL4" firstAttribute="top" secondItem="3vM-6z-pIA" secondAttribute="bottom" constant="1" id="lEh-VQ-qD9"/>
+                                            <constraint firstItem="3vM-6z-pIA" firstAttribute="top" secondItem="UmX-ca-pUI" secondAttribute="topMargin" constant="-5" id="tQh-04-VJ9"/>
+                                        </constraints>
+                                        <size key="customSize" width="600" height="247"/>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="fzZ-VZ-fo0" id="Y86-p6-UvZ"/>
+                                            <outlet property="imageView1" destination="3vM-6z-pIA" id="lsu-27-nNk"/>
+                                            <outlet property="imageView2" destination="DbK-Ry-nCu" id="9qA-FB-q9y"/>
+                                            <outlet property="imageView3" destination="Mhj-NO-kL4" id="q6i-5N-jr8"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TGCollectionViewCell4" id="0g0-r6-DRY" customClass="TGCollectionViewCell4">
-                                        <rect key="frame" x="0.0" y="528" width="600" height="166"/>
+                                        <rect key="frame" x="0.0" y="609" width="600" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="166"/>
