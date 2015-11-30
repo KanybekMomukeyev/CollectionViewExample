@@ -172,35 +172,76 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TGCollectionViewCell4" id="0g0-r6-DRY" customClass="TGCollectionViewCell4">
-                                        <rect key="frame" x="0.0" y="609" width="600" height="166"/>
+                                        <rect key="frame" x="0.0" y="609" width="600" height="247"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="166"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="247"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMI-iq-GW9">
-                                                    <rect key="frame" x="8" y="8" width="276" height="61"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMI-iq-GW9">
+                                                    <rect key="frame" x="8" y="8" width="276" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gMI-iq-GW9" secondAttribute="height" multiplier="1.4:1" id="RP9-zW-rFV"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XmH-IW-kXr">
-                                                    <rect key="frame" x="8" y="71" width="276" height="61"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XmH-IW-kXr">
+                                                    <rect key="frame" x="8" y="115" width="276" height="100"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n21-EI-LSQ">
-                                                    <rect key="frame" x="297" y="8" width="289" height="61"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n21-EI-LSQ">
+                                                    <rect key="frame" x="297" y="8" width="289" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="n21-EI-LSQ" secondAttribute="height" multiplier="1.4:1" id="03d-kS-Bwp"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdM-Rr-3tj">
-                                                    <rect key="frame" x="8" y="137" width="578" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdM-Rr-3tj">
+                                                    <rect key="frame" x="8" y="218.5" width="578" height="20.5"/>
                                                     <color key="backgroundColor" red="0.69859785626062221" green="1" blue="0.75505483737773327" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-ae-iiI">
-                                                    <rect key="frame" x="298" y="72" width="288" height="61"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-ae-iiI">
+                                                    <rect key="frame" x="298" y="115" width="288" height="100"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.98139956492457792" green="1" blue="0.59902648196870145" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="n21-EI-LSQ" firstAttribute="top" secondItem="0g0-r6-DRY" secondAttribute="topMargin" id="A0b-qE-qeT"/>
+                                            <constraint firstItem="n21-EI-LSQ" firstAttribute="leading" secondItem="gMI-iq-GW9" secondAttribute="trailing" constant="13" id="BJZ-7L-UgT"/>
+                                            <constraint firstItem="XmH-IW-kXr" firstAttribute="trailing" secondItem="gMI-iq-GW9" secondAttribute="trailing" id="CZN-9B-Pr4"/>
+                                            <constraint firstItem="XmH-IW-kXr" firstAttribute="top" secondItem="gMI-iq-GW9" secondAttribute="bottom" constant="7" id="DcN-L7-Ij7"/>
+                                            <constraint firstItem="Flr-ae-iiI" firstAttribute="leading" secondItem="n21-EI-LSQ" secondAttribute="leading" id="GfH-Tl-9WG"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="bdM-Rr-3tj" secondAttribute="bottom" id="PLV-zh-3vH"/>
+                                            <constraint firstItem="n21-EI-LSQ" firstAttribute="leading" secondItem="gMI-iq-GW9" secondAttribute="trailing" constant="13" id="PNM-WL-GUN"/>
+                                            <constraint firstItem="Flr-ae-iiI" firstAttribute="top" secondItem="n21-EI-LSQ" secondAttribute="bottom" constant="7" id="Pk6-VV-Q29"/>
+                                            <constraint firstItem="Flr-ae-iiI" firstAttribute="trailing" secondItem="n21-EI-LSQ" secondAttribute="trailing" id="Sne-Mv-Dr1"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="n21-EI-LSQ" secondAttribute="trailing" constant="6" id="TQj-3D-KQg"/>
+                                            <constraint firstItem="gMI-iq-GW9" firstAttribute="leading" secondItem="0g0-r6-DRY" secondAttribute="leadingMargin" id="acn-Jn-bb0"/>
+                                            <constraint firstItem="Flr-ae-iiI" firstAttribute="height" secondItem="n21-EI-LSQ" secondAttribute="height" id="dsq-sf-YDd"/>
+                                            <constraint firstItem="XmH-IW-kXr" firstAttribute="leading" secondItem="gMI-iq-GW9" secondAttribute="leading" id="e6Z-3A-RcF"/>
+                                            <constraint firstItem="bdM-Rr-3tj" firstAttribute="top" secondItem="XmH-IW-kXr" secondAttribute="bottom" constant="7" id="gVF-4I-Ryc"/>
+                                            <constraint firstItem="gMI-iq-GW9" firstAttribute="top" secondItem="0g0-r6-DRY" secondAttribute="topMargin" id="mNk-ON-Swh"/>
+                                            <constraint firstItem="n21-EI-LSQ" firstAttribute="width" secondItem="gMI-iq-GW9" secondAttribute="width" id="o5C-di-D8G"/>
+                                            <constraint firstItem="bdM-Rr-3tj" firstAttribute="leading" secondItem="0g0-r6-DRY" secondAttribute="leadingMargin" id="pka-Yx-WX6"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="bdM-Rr-3tj" secondAttribute="trailing" constant="6" id="qiI-pe-RNT"/>
+                                            <constraint firstItem="bdM-Rr-3tj" firstAttribute="top" secondItem="Flr-ae-iiI" secondAttribute="bottom" constant="7" id="sgs-bm-puQ"/>
+                                            <constraint firstItem="XmH-IW-kXr" firstAttribute="height" secondItem="gMI-iq-GW9" secondAttribute="height" id="x6z-5M-2iS"/>
+                                        </constraints>
+                                        <size key="customSize" width="600" height="247"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BJZ-7L-UgT"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="bdM-Rr-3tj" id="f8a-eH-nb1"/>
+                                            <outlet property="imageView1" destination="gMI-iq-GW9" id="bLo-ti-duk"/>
+                                            <outlet property="imageView2" destination="n21-EI-LSQ" id="zZs-lz-f8K"/>
+                                            <outlet property="imageView3" destination="XmH-IW-kXr" id="SOK-ck-DO7"/>
+                                            <outlet property="imageView4" destination="Flr-ae-iiI" id="yR8-5O-0YB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

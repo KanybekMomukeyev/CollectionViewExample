@@ -176,7 +176,18 @@
         [cell3.imageView3 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:2]]];
         cell3.cellLabel.text = message.messageString;
         return cell3;
-    } else {
+    } else if(message.imageItems.count == 4)
+    {
+        TGCollectionViewCell4 *cell4 = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell4"
+                                                                                 forIndexPath:indexPath];
+        [cell4.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
+        [cell4.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
+        [cell4.imageView3 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:2]]];
+        [cell4.imageView4 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:3]]];
+        cell4.cellLabel.text = message.messageString;
+        return cell4;
+    } else
+    {
         TGCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell"
                                                                                forIndexPath:indexPath];
         NSString *imageUrl = [message.imageItems lastObject];
@@ -196,6 +207,14 @@
     CGFloat height = [ViewController heightForText:message.messageString
                                               font:[UIFont systemFontOfSize:17]
                                        withinWidth:(320 - 2*10)];
+    
+    if (UIDeviceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+    {
+        NSLog(@"UIDeviceOrientationLandscapeLeft");
+    }
+    NSLog(@"UIDeviceOrientationPortrait");
+    
+    
     if (message.imageItems.count > 2)
     {
         return CGSizeMake(self.currentCellSize.width - 2 * 10, height + 120);
