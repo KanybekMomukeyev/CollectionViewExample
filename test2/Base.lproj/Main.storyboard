@@ -35,11 +35,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="166"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TP2-l9-kiZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TP2-l9-kiZ">
                                                     <rect key="frame" x="8" y="8" width="584" height="111"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="111" id="fDn-gA-oif"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zME-Q7-Vye">
-                                                    <rect key="frame" x="8" y="127" width="584" height="26"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zME-Q7-Vye">
+                                                    <rect key="frame" x="17" y="122" width="563" height="36"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,6 +52,15 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="zME-Q7-Vye" firstAttribute="bottom" secondItem="Rbf-tb-kGS" secondAttribute="bottomMargin" id="BDR-sd-PTY"/>
+                                            <constraint firstItem="TP2-l9-kiZ" firstAttribute="top" secondItem="Rbf-tb-kGS" secondAttribute="topMargin" id="KeN-oF-tvc"/>
+                                            <constraint firstItem="zME-Q7-Vye" firstAttribute="top" secondItem="TP2-l9-kiZ" secondAttribute="bottom" constant="3" id="Re4-VL-GVy"/>
+                                            <constraint firstItem="TP2-l9-kiZ" firstAttribute="trailing" secondItem="Rbf-tb-kGS" secondAttribute="trailingMargin" id="X52-Bd-ib4"/>
+                                            <constraint firstItem="zME-Q7-Vye" firstAttribute="trailing" secondItem="Rbf-tb-kGS" secondAttribute="trailingMargin" constant="-12" id="kP0-8B-uIr"/>
+                                            <constraint firstItem="zME-Q7-Vye" firstAttribute="leading" secondItem="Rbf-tb-kGS" secondAttribute="leadingMargin" constant="9" id="mJ4-JK-Slz"/>
+                                            <constraint firstItem="TP2-l9-kiZ" firstAttribute="leading" secondItem="Rbf-tb-kGS" secondAttribute="leadingMargin" id="nK7-dX-P3q"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="image" destination="TP2-l9-kiZ" id="rxC-B9-Hln"/>
                                             <outlet property="label" destination="zME-Q7-Vye" id="8fc-XJ-ZcF"/>
