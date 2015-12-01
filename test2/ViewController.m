@@ -13,11 +13,8 @@
 #import "TGMessage.h"
 #import "TGCollectionViewLayout.h"
 #import "UIApplication+TGAppDimensions.h"
-
 #import "TGCollectionViewCell.h"
-#import "TGCollectionViewCell2.h"
-#import "TGCollectionViewCell3.h"
-#import "TGCollectionViewCell4.h"
+#import <Masonry/View+MASAdditions.h>
 
 @interface ViewController ()
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
@@ -161,43 +158,15 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    TGMessage *message = [self.items objectAtIndex:indexPath.row];
-    if (message.imageItems.count == 2) {
-        TGCollectionViewCell2 *cell2 = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell2"
-                                                                               forIndexPath:indexPath];
-        [cell2.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
-        [cell2.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
-        cell2.cellLabel.text = message.messageString;
-        return cell2;
-    } else if (message.imageItems.count == 3)
-    {
-        TGCollectionViewCell3 *cell3 = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell3"
-                                                                               forIndexPath:indexPath];
-        [cell3.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
-        [cell3.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
-        [cell3.imageView3 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:2]]];
-        cell3.cellLabel.text = message.messageString;
-        return cell3;
-    } else if(message.imageItems.count == 4)
-    {
-        TGCollectionViewCell4 *cell4 = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell4"
-                                                                                 forIndexPath:indexPath];
-        [cell4.imageView1 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:0]]];
-        [cell4.imageView2 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:1]]];
-        [cell4.imageView3 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:2]]];
-        [cell4.imageView4 sd_setImageWithURL:[NSURL URLWithString:[message.imageItems objectAtIndex:3]]];
-        cell4.cellLabel.text = message.messageString;
-        return cell4;
-    } else
-    {
-        TGCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell"
-                                                                               forIndexPath:indexPath];
-        NSString *imageUrl = [message.imageItems lastObject];
-        [cell.image sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
-        cell.label.text = message.messageString;
-        return cell;
-    }
-    return nil;
+    TGCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TGCollectionViewCell"
+                                                                           forIndexPath:indexPath];
+    TGMessage *message = [self.items objectAtIndex:indexPath.item];
+    NSString *imageUrl = [message.imageItems lastObject];
+    [cell.imageView1 sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
+    cell.cellLabel.text = message.messageString;
+    cell.message = message;
+    [cell reloadAllDataInCell];
+    return cell;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout methods
@@ -210,11 +179,11 @@
                                               font:[UIFont systemFontOfSize:17]
                                        withinWidth:(320 - 2*10)];
     
-    if (UIDeviceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
-    {
-        NSLog(@"UIDeviceOrientationLandscapeLeft");
-    }
-    NSLog(@"UIDeviceOrientationPortrait");
+//    if (UIDeviceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+//    {
+//        NSLog(@"UIDeviceOrientationLandscapeLeft");
+//    }
+//    NSLog(@"UIDeviceOrientationPortrait");
     
     
     if (message.imageItems.count > 2)

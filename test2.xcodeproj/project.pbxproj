@@ -16,9 +16,6 @@
 		A8FD88CB1C0C112100736D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FD88CA1C0C112100736D3C /* Assets.xcassets */; };
 		A8FD88CE1C0C112100736D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FD88CC1C0C112100736D3C /* LaunchScreen.storyboard */; };
 		A8FD88D71C0C130C00736D3C /* TGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88D61C0C130C00736D3C /* TGCollectionViewCell.m */; };
-		A8FD88DE1C0C287300736D3C /* TGCollectionViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88DD1C0C287300736D3C /* TGCollectionViewCell2.m */; };
-		A8FD88E11C0C288D00736D3C /* TGCollectionViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88E01C0C288D00736D3C /* TGCollectionViewCell3.m */; };
-		A8FD88E41C0C28A600736D3C /* TGCollectionViewCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88E31C0C28A600736D3C /* TGCollectionViewCell4.m */; };
 		A8FD88E71C0C303B00736D3C /* TGMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88E61C0C303B00736D3C /* TGMessage.m */; };
 		A8FD88EA1C0C3D5200736D3C /* TGCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD88E91C0C3D5200736D3C /* TGCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
@@ -40,12 +37,6 @@
 		A8FD88CF1C0C112100736D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8FD88D51C0C130C00736D3C /* TGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCollectionViewCell.h; sourceTree = "<group>"; };
 		A8FD88D61C0C130C00736D3C /* TGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCollectionViewCell.m; sourceTree = "<group>"; };
-		A8FD88DC1C0C287300736D3C /* TGCollectionViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCollectionViewCell2.h; sourceTree = "<group>"; };
-		A8FD88DD1C0C287300736D3C /* TGCollectionViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCollectionViewCell2.m; sourceTree = "<group>"; };
-		A8FD88DF1C0C288D00736D3C /* TGCollectionViewCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCollectionViewCell3.h; sourceTree = "<group>"; };
-		A8FD88E01C0C288D00736D3C /* TGCollectionViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCollectionViewCell3.m; sourceTree = "<group>"; };
-		A8FD88E21C0C28A600736D3C /* TGCollectionViewCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCollectionViewCell4.h; sourceTree = "<group>"; };
-		A8FD88E31C0C28A600736D3C /* TGCollectionViewCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCollectionViewCell4.m; sourceTree = "<group>"; };
 		A8FD88E51C0C303B00736D3C /* TGMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMessage.h; sourceTree = "<group>"; };
 		A8FD88E61C0C303B00736D3C /* TGMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMessage.m; sourceTree = "<group>"; };
 		A8FD88E81C0C3D5200736D3C /* TGCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -105,12 +96,6 @@
 				A8FD88E61C0C303B00736D3C /* TGMessage.m */,
 				A8FD88D51C0C130C00736D3C /* TGCollectionViewCell.h */,
 				A8FD88D61C0C130C00736D3C /* TGCollectionViewCell.m */,
-				A8FD88DC1C0C287300736D3C /* TGCollectionViewCell2.h */,
-				A8FD88DD1C0C287300736D3C /* TGCollectionViewCell2.m */,
-				A8FD88DF1C0C288D00736D3C /* TGCollectionViewCell3.h */,
-				A8FD88E01C0C288D00736D3C /* TGCollectionViewCell3.m */,
-				A8FD88E21C0C28A600736D3C /* TGCollectionViewCell4.h */,
-				A8FD88E31C0C28A600736D3C /* TGCollectionViewCell4.m */,
 				A8FD88C71C0C112100736D3C /* Main.storyboard */,
 				A8FD88BE1C0C112100736D3C /* Supporting Files */,
 				A8BB30561C0C7D9D005CB1FF /* UIApplication+TGAppDimensions.h */,
@@ -260,10 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8FD88C61C0C112100736D3C /* ViewController.m in Sources */,
-				A8FD88DE1C0C287300736D3C /* TGCollectionViewCell2.m in Sources */,
 				A8FD88C31C0C112100736D3C /* AppDelegate.m in Sources */,
-				A8FD88E41C0C28A600736D3C /* TGCollectionViewCell4.m in Sources */,
-				A8FD88E11C0C288D00736D3C /* TGCollectionViewCell3.m in Sources */,
 				A8FD88C01C0C112100736D3C /* main.m in Sources */,
 				A8FD88E71C0C303B00736D3C /* TGMessage.m in Sources */,
 				A8FD88EA1C0C3D5200736D3C /* TGCollectionViewLayout.m in Sources */,
@@ -380,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = test2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seyteck.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = test2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seyteck.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";

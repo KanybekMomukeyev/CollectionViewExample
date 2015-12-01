@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TGMessage;
 @interface TGCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *image;
-@property (strong, nonatomic) IBOutlet UILabel *label;
+@property (nonatomic, strong) UIImageView *imageView1;
+@property (nonatomic, strong) UIImageView *imageView2;
+@property (nonatomic, strong) UIImageView *imageView3;
+@property (nonatomic, strong) UIImageView *imageView4;
+@property (nonatomic, strong) UILabel *cellLabel;
+@property (nonatomic, strong) TGMessage *message;
+- (void)reloadAllDataInCell;
 @end
