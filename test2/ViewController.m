@@ -55,10 +55,12 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
+    
     self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [self.flowLayout setItemSize:CGSizeMake(200, 200)];
     [self.flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     [self.collectionView setCollectionViewLayout:self.flowLayout];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
